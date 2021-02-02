@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: greenyellow;
+    height: 100vh;
+    width: 220vh;
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.fighter {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    height: 20em;
+    width: 10em;
+}
+
+.player {
+    border: solid 0.2em orange;
+    width: 80em;
+}
+
+.playerA {
+    border: solid 0.2em red;
+    filter: grayscale(70%);
+}
+
+.playerB {
+    border: solid 0.2em green;
+    filter: grayscale(70%);
+
+}
