@@ -7,9 +7,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: greenyellow;
+    background-color: black;
     height: 100vh;
-    width: 220vh;
+    width: 275vh;
     background-position: center;  
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +26,7 @@
 
 .player {
     border: solid 0.2em orange;
-    width: 80em;
+    width: 90em;
 }
 
 .playerA {
@@ -39,3 +39,12 @@
     filter: grayscale(70%);
 
 }
+
+.hitButton {
+    display: flex;
+    background-color: grey;
+    width: 2em;
+    height: 2em;
+    border-radius: 0.5em;
+}
+
