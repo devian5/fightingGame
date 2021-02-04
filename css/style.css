@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8em;
+    height: 18em;
 }
 
 .attack {
@@ -85,11 +85,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 45em;
+    /* width: 45em;quitar el width */
     height: 20em;
 }
 
-.pepeStile {
+.pepeStyle {
     width: 7em;
     height: 7em;
 }
