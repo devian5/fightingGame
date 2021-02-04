@@ -8,24 +8,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="fighter">
-            <div class="player" id="pikachu" onclick="openingGame.selectFighter('pikachu')"><img src="./img/pikachu2.gif" alt="pikachu"></div>
-            <div class="player" id="mario" onclick="openingGame.selectFighter('mario')"><img src="./img/Mario-Martillo.gif" alt="mario"></div>
-            <div class="player" id="sonic" onclick="openingGame.selectFighter('sonic')"><img src="./img/sonic.gif" alt="sonic"></div>
-            <div class="player" id="wario" onclick="openingGame.selectFighter('wario')"><img src="./img/wario.gif" alt="wario"></div>
-            <div class="player" id="browser" onclick="openingGame.selectFighter('browser')"><img src="./img/browser2.gif" alt="browser"></div>
-            <div class="player" id="link" onclick="openingGame.selectFighter('link')"><img src="./img/link.gif" alt="link"></div>
-            <!-- <div class="player" id="jim" onclick="openingGame.selectFighter('jim')"><img src="./img/Jim2.gif" alt="jim"></div> -->
+        <div id="screen1" class="front1" style="display: block">
+            <div class="fighter">
+                <div class="player" id="pikachu" onclick="selectFighter('pikachu')"><img src="./img/pikachu.gif" alt="pika"></div>
+                <div class="player" id="mario" onclick="selectFighter('mario')"><img src="./img/Mario.gif" alt="mario"></div>
+                <div class="player" id="sonic" onclick="selectFighter('sonic')"><img src="./img/sonic.gif" alt="sonic"></div>
+                <div class="player" id="wario" onclick="selectFighter('wario')"><img src="./img/wario.gif" alt="wario"></div>
+                <div class="player" id="browser" onclick="selectFighter('browser')"><img src="./img/browser.gif" alt="browser"></div>
+                <div class="player" id="link" onclick="selectFighter('link')"><img src="./img/link.gif" alt="link"></div>
+                <!-- <div class="player" id="jim" onclick="selectFighter('jim')"><img src="./img/Jim.gif" alt="jim"></div> -->
+            </div>
         </div>
-
-        <div class="hitButton">
-            <div id="strike" class="attack" onclick="attack()"></div>
+        
+        <div id="screen2" class="front2" style="display: none">
+            <div class="opponents">
+                <div id="squadA"></div>
+                <div id="squadB"></div>
+            </div>
+            
+            
+            <div class="hitButton">
+                <div id="strike" class="attack" onclick="hit()"></div>
+            </div>
         </div>
+        
+        <!-- <audio src="./audio/Metroid.mp3" preload="metadata" autoplay></audio> -->
 
     </div>
     
     
-    
+    <script src="./js/fighter.js"></script>
     <script src="./js/initialGame.js"></script>
     <script src="./js/main.js"></script>
 </body>

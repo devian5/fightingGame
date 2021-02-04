@@ -8,8 +8,9 @@
     justify-content: center;
     flex-direction: column;
     background-color: black;
-    height: 100vh;
-    width: 275vh;
+    height: 45em; 
+    width: 89em;
+    /* background-image: url('../img/segaVSnintendo.jpeg'); */
     background-position: center;  
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,13 +21,17 @@
     display: flex;
     flex-direction: row;
     margin: 1em;
-    height: 20em;
-    width: 10em;
+    /* height: 20em;
+    width: 10em; */
+    width: 8em;
+    
 }
 
 .player {
-    border: solid 0.2em orange;
-    width: 90em;
+    display: flex;
+    justify-content: center;
+    /* border: solid 0.2em orange; */
+    width: 15em;
 }
 
 .playerA {
@@ -46,5 +51,35 @@
     width: 2em;
     height: 2em;
     border-radius: 0.5em;
+}
+
+
+.front1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* width: 100%; */
+}
+
+.front2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.opponents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pepeStile {
+    width: 15em;
+    height: 15em;
 }
 
