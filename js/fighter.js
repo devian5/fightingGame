@@ -1,7 +1,7 @@
 class Fighter{
     constructor(nick,health,strength,defense,agility,luck){
-        this.health = health;
         this.nick = nick;
+        this.health = health;
         this.strength = strength;
         this.defense = defense;
         this.agility = agility;
@@ -104,6 +104,7 @@ let selectFighter = (fighter) => {
                 screenChange('screen1', 'screen2');
                 
             });
+            console.log(showTeamA.innerHTML)
         }
 
         
@@ -127,25 +128,27 @@ let hit = () => {
     let turn = Math.floor(Math.random() * 2);
     let special = Math.floor(Math.random() * 5);
 
+    console.log(teamA[0])
+    console.log('IEEEEEEEEEEEEE')
     
     if(turn == 0){
         if(special == 3){
             console.log('AL ATAAAAQUEEEE!')
-            teamA[0].specialAttack(teamB[0]);
+            teamA[0].nick.specialAttack(teamB[0].nick);
         }else{
             console.log('ATAQUE xD')
-            teamA[0].attack(teamB[0]);
+            teamA[0].nick.attack(teamB[0].nick);
         }
     }else{
         if(special == 3){
-            teamA[0].specialAttack(teamB[0]);
+            teamB[0].nick.specialAttack(teamA[0].nick);
         }else{
-            teamB[0].attack(teamB[0]);
+            teamB[0].nick.attack(teamA[0].nick);
         }
 
     }
 
-    console.log(teamA.nick, teamA.health);
-    console.log(teamB.nick, teamB.health);
+    console.log(teamA[0].nick, teamA[0].health);
+    console.log(teamB[0].nick, teamB[0].health);
 
 }

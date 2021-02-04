@@ -8,19 +8,19 @@
     justify-content: center;
     flex-direction: column;
     background-color: black;
-    height: 45em; 
-    width: 89em;
+    height: 48em; 
+    width: 80em;
     /* background-image: url('../img/segaVSnintendo.jpeg'); */
-    background-position: center;  
+    /* background-position: center;  
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 .fighter {
     display: flex;
     flex-direction: row;
-    margin: 1em;
+    margin: 20em;
     /* height: 20em;
     width: 10em; */
     width: 8em;
@@ -31,7 +31,8 @@
     display: flex;
     justify-content: center;
     /* border: solid 0.2em orange; */
-    width: 15em;
+    width: 8em;
+    height: 8em;
 }
 
 .playerA {
@@ -47,11 +48,19 @@
 
 .hitButton {
     display: flex;
-    background-color: grey;
-    width: 2em;
-    height: 2em;
-    border-radius: 0.5em;
+    align-items: center;
+    justify-content: center;
+    height: 8em;
 }
+
+.attack {
+    height: 5em;
+    width: 5em;
+    border-radius: 0.5em;
+    background-color: blue;
+    margin: 1em;
+}
+
 
 
 .front1 {
@@ -65,7 +74,7 @@
 
 .front2 {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
 
@@ -76,10 +85,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 45em;
+    height: 20em;
 }
 
 .pepeStile {
-    width: 15em;
-    height: 15em;
+    width: 7em;
+    height: 7em;
 }
 
