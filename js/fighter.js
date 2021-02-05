@@ -9,7 +9,12 @@ class Fighter{
     }
 
     attack(rival){
-        rival.health -= (this.strength - this.defense);
+        const getRandomArbitrary = (min, max) => {
+            return Math.random() * (max - min) + min;
+          }
+    
+        let fluke = getRandomArbitrary(1.5,rival.luck);
+        rival.health -= (this.strength - this.defense) * fluke;
     }
 
     specialAttack(rival){
@@ -17,19 +22,13 @@ class Fighter{
 
     }
 
-    // fluke(player){
-    //     this.random(2,player.luck)
+    // fluke(){
+    //     this.random(2,this.luck);
     // }
 
     // dexterity(player){
     //     this.random(5, player.agility)
     // }
-
-    
-
-    random(){
-        return Math.floor(Math.random() * (max - min) + 1);
-    }
 
 }
 
@@ -140,12 +139,9 @@ let screenChange = (present,future) =>{
 }
 
 
-
 let hit = () => {
-    let turn = Math.floor(Math.random() * 2);
-    let special = Math.floor(Math.random() * 5);
-
-    console.log('IEEEEEEEEEEEEE')
+    let turn = Math.floor(Math.random() * 5);
+    let special = Math.floor(Math.random() * 8);
     
     if(turn == 0){
         if(special == 3){
