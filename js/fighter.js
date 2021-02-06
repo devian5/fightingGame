@@ -134,6 +134,7 @@ let screenChange = (present,future) =>{
 }
 
 
+
 let hit = () => {
     let turn = Math.floor(Math.random() * 2);
     let special = Math.floor(Math.random() * 2);
@@ -212,20 +213,37 @@ let hit = () => {
     };
     
     if(scoreTeamA == 2){
+        winnerTeamA = document.getElementById('winnerTeamA')
+        console.log(scoreTeamA.nick)
+        winnerTeamA.innerHTML = `
+        <div><img class="pepeStyle" src="img/${p1.nick}.gif"></div>
+        <div><img class="pepeStyle" src="img/${p2.nick}.gif"></div>
+        <div><img class="pepeStyle" src="img/${p3.nick}.gif"></div>
+        `;
+        console.log(winnerTeamA.innerHTML)
         resolveIn(2000).then(delay => {
-                
+            
             screenChange('screen2', 'screen3');  
         });
-
+        
     }else if(scoreTeamB == 2){
+        console.log(scoreTeamB.nick)
+        winnerTeamB = document.getElementById('winnerTeamB')
+        winnerTeamB.innerHTML = `
+        <div><img class="pepeStyle" src="img/${p4.nick}.gif"></div> 
+        <div><img class="pepeStyle" src="img/${p5.nick}.gif"></div> 
+        <div><img class="pepeStyle" src="img/${p6.nick}.gif"></div>
+        `;
+        console.log(winnerTeamB.innerHTML)
         resolveIn(2000).then(delay => {
                 
             screenChange('screen2', 'screen3');  
         });
 
     }
-
-
-
+    
+    
+    
 }
+
 
