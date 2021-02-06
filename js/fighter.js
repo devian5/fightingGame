@@ -100,7 +100,7 @@ let selectFighter = (fighter) => {
                 
             });
         };
-
+        
     };
     // console.log(p1,p2,p3,p4,p5,p6)  
 };
@@ -184,32 +184,48 @@ let hit = () => {
 
     }
 
-    // winner = document.getElementById('winner')
+    let scoreTeamA = 0;
+    let scoreTeamB = 0;
 
-    // if(p1.health < 0){
-    //     winner.innerHTML = `${p4.nick} is win!`
-    // }else{
-    //     winner.innerHTML = `${p1.nick} is win`
-    // }
-    console.log('VIDA Player1', healthPlayer1)  
-    console.log('VIDA Player2', healthPlayer2)  
-    console.log('VIDA Player3', healthPlayer3)  
-    console.log('VIDA Player4', healthPlayer4)  
-    console.log('VIDA Player5', healthPlayer5)  
-    console.log('VIDA Player6', healthPlayer6)  
+    if(p1.health < 1){
+        scoreTeamB += 1;
+        console.log(scoreTeamB, 'gana 1 B');
+    }else if(p4.health < 1){
+        scoreTeamA += 1;
+        console.log(scoreTeamA, 'gana 1 A');
+    };
+    
+    if(p2.health < 1){
+        scoreTeamB += 1;
+        console.log(scoreTeamB, 'gana 1 B');
+    }else if(p5.health < 1){
+        scoreTeamA += 1;
+        console.log(scoreTeamA, 'gana 1 A');
+    };
 
-    console.log('PRIMERA',p1.nick, ':', Math.floor(p1.health));
-    console.log('<------------------------------------->')
-    console.log('SEGUNDA',p2.nick, ':', Math.floor(p2.health));
-    console.log('<------------------------------------->')
-    console.log('TERCERA',p3.nick, ':', Math.floor(p3.health));
-    console.log('<------------------------------------->')
-    console.log('CUERTA',p4.nick, ':', Math.floor(p4.health));
-    console.log('<------------------------------------->')
-    console.log('QUINTA',p5.nick, ':', Math.floor(p5.health));
-    console.log('<------------------------------------->')
-    console.log('SEXTA',p6.nick, ':', Math.floor(p6.health));
-    console.log('SIGUIENTE RONDA')
+    if(p3.health < 1){
+        scoreTeamB += 1;
+        console.log(scoreTeamB, 'gana 1 B');
+    }else if(p6.health < 1){
+        scoreTeamA += 1;
+        console.log(scoreTeamA, 'gana 1 A');
+    };
+    
+    if(scoreTeamA == 2){
+        resolveIn(2000).then(delay => {
+                
+            screenChange('screen2', 'screen3');  
+        });
+
+    }else if(scoreTeamB == 2){
+        resolveIn(2000).then(delay => {
+                
+            screenChange('screen2', 'screen3');  
+        });
+
+    }
+
+
 
 }
 
