@@ -21,7 +21,6 @@ class Fighter{
         rival.health -= (this.strength + this.agility) - this.defense; 
 
     }
-
 }
 
 // nick,health,strength,defense,agility,luck
@@ -32,7 +31,6 @@ let player3 = new Fighter('sonic',200,25,10,60,2)
 let player4 = new Fighter('wario',200,35,50,20,2)
 let player5 = new Fighter('browser',200,40,40,15,3)
 let player6 = new Fighter('link',200,40,50,50,3)
-
 
 let p1 = '';
 let p2 = '';
@@ -50,59 +48,11 @@ let allPlayers = {
     'link': player6
 };
 
-
 let teamA = [];
 let teamB = [];
-
-        
+     
 let selectFighter = (fighter) => {
-
-    if(teamA.length < 3){
-
-        teamA.push(allPlayers[fighter]);
-
-        let elementA = document.getElementById(fighter);
-        elementA.classList.add('playerA');
-
-        team1Assignment();
-
-        document.getElementById(fighter).onclick = ''; 
-
-    }else if(teamB.length < 3){
-        //lo introducimos en la B
-        teamB.push(allPlayers[fighter]);
-
-        let elementB = document.getElementById(fighter);
-        elementB.classList.add('playerB');
-
-        document.getElementById(fighter).onclick = '';
-
-        team2Assignment(); 
-
-        if(teamB.length == 3){
-            let showTeamA = document.getElementById('squadA');
-            let showTeamB = document.getElementById('squadB');
-        
-            showTeamA.innerHTML = `
-                <div><img class="pepeStyle" src="img/${teamA[0].nick}.gif"></div>
-                <div><img class="pepeStyle" src="img/${teamA[1].nick}.gif"></div>
-                <div><img class="pepeStyle" src="img/${teamA[2].nick}.gif"></div>
-            `;
-            showTeamB.innerHTML = `
-                <div><img class="pepeStyle" src="img/${teamB[0].nick}.gif"></div> 
-                <div><img class="pepeStyle" src="img/${teamB[1].nick}.gif"></div> 
-                <div><img class="pepeStyle" src="img/${teamB[2].nick}.gif"></div>
-                `;
-           
-            resolveIn(2000).then(delay => {
-                
-                screenChange('screen1', 'screen2');
-                
-            });
-        };
-        
-    };
-    // console.log(p1,p2,p3,p4,p5,p6)  
+    select.playerCollection(fighter)
 };
 
 
@@ -185,68 +135,8 @@ let hit = () => {
             healthPlayer5.value = `${p5.health}`  
             healthPlayer6.value = `${p6.health}`  
         }
-
     }
 
-    let scoreTeamA = 0;
-    let scoreTeamB = 0;
+    points.score()
 
-    if(p1.health < 1){
-        scoreTeamB += 1;
-        console.log(scoreTeamB, 'gana 1 B');
-    }else if(p4.health < 1){
-        scoreTeamA += 1;
-        console.log(scoreTeamA, 'gana 1 A');
-    };
-    
-    if(p2.health < 1){
-        scoreTeamB += 1;
-        console.log(scoreTeamB, 'gana 1 B');
-    }else if(p5.health < 1){
-        scoreTeamA += 1;
-        console.log(scoreTeamA, 'gana 1 A');
-    };
-
-    if(p3.health < 1){
-        scoreTeamB += 1;
-        console.log(scoreTeamB, 'gana 1 B');
-    }else if(p6.health < 1){
-        scoreTeamA += 1;
-        console.log(scoreTeamA, 'gana 1 A');
-    };
-    
-    if(scoreTeamA == 2){
-        winnerTeamA = document.getElementById('winnerTeamA')
-        console.log(scoreTeamA.nick)
-        winnerTeamA.innerHTML = `
-        <div><img class="pepeStyle" src="img/${p1.nick}.gif"></div>
-        <div><img class="pepeStyle" src="img/${p2.nick}.gif"></div>
-        <div><img class="pepeStyle" src="img/${p3.nick}.gif"></div>
-        `;
-        console.log(winnerTeamA.innerHTML)
-        resolveIn(2000).then(delay => {
-            
-            screenChange('screen2', 'screen3');  
-        });
-        
-    }else if(scoreTeamB == 2){
-        console.log(scoreTeamB.nick)
-        winnerTeamB = document.getElementById('winnerTeamB')
-        winnerTeamB.innerHTML = `
-        <div><img class="pepeStyle" src="img/${p4.nick}.gif"></div> 
-        <div><img class="pepeStyle" src="img/${p5.nick}.gif"></div> 
-        <div><img class="pepeStyle" src="img/${p6.nick}.gif"></div>
-        `;
-        console.log(winnerTeamB.innerHTML)
-        resolveIn(2000).then(delay => {
-                
-            screenChange('screen2', 'screen3');  
-        });
-
-    }
-    
-    
-    
 }
-
-

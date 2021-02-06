@@ -69,7 +69,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    /* width: 100%; */
 }
 
 .front2 {
@@ -107,7 +107,7 @@
     align-items: center;
     width: 25em;
     height: 18em;
-    margin-top: 2.5em;
+    margin-top: 3.7em;
     overflow: visible;
 }
 .pepe{
@@ -115,12 +115,11 @@
     height: 1em;
 }
 
-
 .resetButton{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-block-end: 5em;
+    /* margin-block-end: 5em; */
 
 }
 

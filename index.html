@@ -17,9 +17,8 @@
                 <div class="player" id="wario" onclick="selectFighter('wario')"><img src="./img/wario.gif" alt="wario"></div>
                 <div class="player" id="browser" onclick="selectFighter('browser')"><img src="./img/browser.gif" alt="browser"></div>
                 <div class="player" id="link" onclick="selectFighter('link')"><img src="./img/link.gif" alt="link"></div>
-                <!-- <div class="player" id="jim" onclick="selectFighter('jim')"><img src="./img/Jim.gif" alt="jim"></div> -->
             </div>
-            <!-- <audio src="./audio/Metroid.mp3" preload="metadata" autoplay></audio> -->
+            <audio src="./audio/Pokemon_Gold_Silver_Battle.mp3" autoplay></audio>
         </div>
         
         <div id="screen2" class="front2" style="display: none">
@@ -61,18 +60,22 @@
         </div>
 
         <div id="screen3" class="front3" style="display: none">
+            <div id="messageA"></div>
+            <div id="messageB"></div>
             <div class="opponents">
                 <div id="winnerTeamA"></div>
                 <div id="winnerTeamB"></div>
             </div>
 
+            <div class="resetButton">
+                <button class="reset" id="reset">Selección</button>
+            </div>
         </div>   
-        <div class="resetButton">
-            <button class="reset" id="reset">Selección</button>
-        </div>
     </div>
     
-    
     <script src="./js/fighter.js"></script>
+    <script src="./js/wins.js"></script>
+    <script src="./js/score.js"></script>
+    <script src="./js/selector.js"></script>
 </body>
 </html>
