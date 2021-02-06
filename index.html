@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+
         <div id="screen1" class="front1" style="display: block">
             <div class="fighter">
                 <div class="player" id="pikachu" onclick="selectFighter('pikachu')"><img src="./img/pikachu.gif" alt="pika"></div>
@@ -48,6 +49,7 @@
                 </div>
                 <progress id="healthPlayer6" value="200" max="200" min="0"></progress>
             </div>
+
             <div class="opponents">
                 <div id="squadA"></div>
                 <div id="squadB"></div>
@@ -56,15 +58,18 @@
             <div class="hitButton">
                 <div onclick="hit()" id="strike" class="attack" ></div>
             </div>
-            <!-- <div id="winner"></div> -->
         </div>
+
         <div id="screen3" class="front3" style="display: none">
             <div class="opponents">
                 <div id="winnerTeamA"></div>
                 <div id="winnerTeamB"></div>
             </div>
-        </div>   
 
+        </div>   
+        <div class="resetButton">
+            <button class="reset" id="reset">Selección</button>
+        </div>
     </div>
     
     

@@ -133,7 +133,10 @@ let screenChange = (present,future) =>{
     screenFuture.style.display = 'block'
 }
 
-
+const reset = document.getElementById('reset');
+reset.addEventListener('click', () => {
+    window.location.reload();
+})
 
 let hit = () => {
     let turn = Math.floor(Math.random() * 2);
