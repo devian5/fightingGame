@@ -85,6 +85,7 @@ let screenChange = (present,future) =>{
 
 const reset = document.getElementById('reset');
 reset.addEventListener('click', () => {
+    alert('Game over... loadding');
     window.location.reload();
 })
 
