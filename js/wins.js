@@ -3,7 +3,7 @@ let winsTeam = {
     winningTeamA() {
         messageTeamA = document.getElementById('messageA');
         winnerTeamA = document.getElementById('winnerTeamA')
-        messageTeamA.innerHTML = `Ha ganado${teamA.nick}`
+        messageTeamA.innerHTML = `The teamA wins!!`
         
         winnerTeamA.innerHTML = `
         <div><img class="pepeStyle" src="img/${p1.nick}.gif"></div>
@@ -20,8 +20,9 @@ let winsTeam = {
 
     winningTeamB() {
         messageTeamB = document.getElementById('messageB');
-        messageTeamB.innerHTML = `Ha ganado${teamB.nick}`
+        messageTeamB.innerHTML = `The teamB wins!!`
         winnerTeamB = document.getElementById('winnerTeamB')
+
         winnerTeamB.innerHTML = `
         <div><img class="pepeStyle" src="img/${p4.nick}.gif"></div> 
         <div><img class="pepeStyle" src="img/${p5.nick}.gif"></div> 

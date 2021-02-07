@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display+SC&family=Press+Start+2P&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="container">
-
-        <div id="screen1" class="front1" style="display: block">
+        <div id="mainScreen" class="front0" style="display: flex">
+            <div class="cover">
+                <div class="startButton" onclick="resolveIn(1000).then(delay => {screenChange('mainScreen','screen1')})">Press start!!</div>
+            </div>
+        </div>
+        <div id="screen1" class="front1" style="display: none">
             <div class="fighter">
                 <div class="player" id="pikachu" onclick="selectFighter('pikachu')"><img src="./img/pikachu.gif" alt="pika"></div>
+                <div class="player" id="wario" onclick="selectFighter('wario')"><img src="./img/wario.gif" alt="wario"></div>
                 <div class="player" id="mario" onclick="selectFighter('mario')"><img src="./img/mario.gif" alt="mario"></div>
                 <div class="player" id="sonic" onclick="selectFighter('sonic')"><img src="./img/sonic.gif" alt="sonic"></div>
-                <div class="player" id="wario" onclick="selectFighter('wario')"><img src="./img/wario.gif" alt="wario"></div>
                 <div class="player" id="browser" onclick="selectFighter('browser')"><img src="./img/browser.gif" alt="browser"></div>
                 <div class="player" id="link" onclick="selectFighter('link')"><img src="./img/link.gif" alt="link"></div>
             </div>
@@ -48,27 +55,27 @@
                 </div>
                 <progress id="healthPlayer6" value="200" max="200" min="0"></progress>
             </div>
-
+            
+            <div class="hitButton">
+                <div onclick="hit()" id="strike" class="attack" >ATTACK!!</div>
+            </div>
             <div class="opponents">
                 <div id="squadA"></div>
                 <div id="squadB"></div>
             </div>
 
-            <div class="hitButton">
-                <div onclick="hit()" id="strike" class="attack" ></div>
-            </div>
         </div>
 
         <div id="screen3" class="front3" style="display: none">
-            <div id="messageA"></div>
-            <div id="messageB"></div>
-            <div class="opponents">
+            <div class="message" id="messageA"></div>
+            <div class="message" id="messageB"></div>
+            <div class="wins">
                 <div id="winnerTeamA"></div>
                 <div id="winnerTeamB"></div>
             </div>
 
             <div class="resetButton">
-                <button class="reset" id="reset">Selección</button>
+                <button class="reset" id="reset">Game Over</button>
             </div>
         </div>   
     </div>
