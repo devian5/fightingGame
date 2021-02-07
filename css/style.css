@@ -25,6 +25,23 @@ html, body {
     background-attachment: fixed;
 }
 
+/* @media screen and (max-width:[ANCHO]px) */
+
+@media screen and (min-widh:960px){
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        background-position: center;  
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    } 
+}
+
 .fighter {
     display: flex;
     flex-direction: row;
