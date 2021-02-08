@@ -27,14 +27,14 @@ let select = {
                 let showTeamB = document.getElementById('squadB');
             
                 showTeamA.innerHTML = `
-                    <div><img class="pepeStyle" src="img/${p1.nick}.gif"></div>
-                    <div><img class="pepeStyle" src="img/${p2.nick}.gif"></div>
-                    <div><img class="pepeStyle" src="img/${p3.nick}.gif"></div>
+                    <div><img class="teamStyle" src="img/${p1.nick}.gif"></div>
+                    <div><img class="teamStyle" src="img/${p2.nick}.gif"></div>
+                    <div><img class="teamStyle" src="img/${p3.nick}.gif"></div>
                 `;
                 showTeamB.innerHTML = `
-                    <div><img class="pepeStyle" src="img/${p4.nick}.gif"></div> 
-                    <div><img class="pepeStyle" src="img/${p5.nick}.gif"></div> 
-                    <div><img class="pepeStyle" src="img/${p6.nick}.gif"></div>
+                    <div><img class="teamStyle" src="img/${p4.nick}.gif"></div> 
+                    <div><img class="teamStyle" src="img/${p5.nick}.gif"></div> 
+                    <div><img class="teamStyle" src="img/${p6.nick}.gif"></div>
                     `;
                
                 resolveIn(2000).then(delay => {
